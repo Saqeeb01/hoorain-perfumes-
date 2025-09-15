@@ -17,13 +17,24 @@ import { Contact } from "./components/pages/Contact";
 import { Admin } from "./components/pages/Admin";
 import { CartDrawer } from "./components/CartDrawer";
 
-const { products, heroImages } = data;
-
+import { Product } from "./components/ProductGrid";
 // --------- ROOT APP ---------
 export default function HoorainPerfumes() {
   const [page, setPage] = useState<Page>("home");
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [heroImages, setHeroImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/api/products")
+      .then((res) => res.json())
+      .then((data) => {
+        setProducts(data.products);
+        setHeroImages(data.heroImages);
+      })
+      .catch((err) => console.error("Error fetching data:", err));
+  }, []);
 
   // Simple hash routing (no extra deps)
   useEffect(() => {
@@ -46,7 +57,7 @@ export default function HoorainPerfumes() {
       const item = products.find((p) => p.id === line.id);
       return sum + (item ? item.price * line.qty : 0);
     }, 0);
-  }, [cart]);
+  }, [cart, products]);
 
   const addToCart = (id: string, qty = 1) => {
     setCart((prev) => {
@@ -81,7 +92,11 @@ export default function HoorainPerfumes() {
         <AnimatePresence mode="wait">
           {page === "home" && (
             <PageShell key="home">
-              <Home addToCart={addToCart} products={products} heroImages={heroImages} />
+              <Home
+                addToCart={addToCart}
+                products={products}
+                heroImages={heroImages}
+              />
             </PageShell>
           )}
           {page === "about" && (
@@ -101,7 +116,7 @@ export default function HoorainPerfumes() {
           )}
           {page === "admin" && (
             <PageShell key="admin">
-              <Admin products={products} />
+              <Admin />
             </PageShell>
           )}
         </AnimatePresence>
