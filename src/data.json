@@ -1,0 +1,41 @@
+{
+  "products": [
+    {
+      "id": "hp-oud-royale",
+      "name": "Oud Royale",
+      "note": "Smoky oud • Amber • Saffron",
+      "price": 3499,
+      "img": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "tag": "Best Seller"
+    },
+    {
+      "id": "hp-rose-velour",
+      "name": "Rose Velour",
+      "note": "Damask rose • Patchouli • Musk",
+      "price": 2999,
+      "img": "https://images.unsplash.com/photo-1585218334450-afcf929da36e?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "tag": "New"
+    },
+    {
+      "id": "hp-amber-noir",
+      "name": "Amber Noir",
+      "note": "Amber • Vanilla • Tonka",
+      "price": 2799,
+      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "tag": "Limited"
+    },
+    {
+      "id": "hp-musk-silk",
+      "name": "Musk Silk",
+      "note": "White musk • Iris • Cashmere",
+      "price": 2299,
+      "img": "https://images.unsplash.com/photo-1594125311687-3b1b3eafa9f4?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "tag": "Classic"
+    }
+  ],
+  "heroImages": [
+    "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1920&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1608571424402-0a3c9e4c0b56?q=80&w=1920&auto=format&fit=crop",
+    "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1920&auto=format&fit=crop"
+  ]
+}
