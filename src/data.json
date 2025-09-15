@@ -6,7 +6,8 @@
       "note": "Smoky oud • Amber • Saffron",
       "price": 3499,
       "img": "https://images.unsplash.com/photo-1523293182086-7651a899d37f?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
-      "tag": "Best Seller"
+      "tag": "Best Seller",
+      "category": "perfumes"
     },
     {
       "id": "hp-rose-velour",
@@ -14,7 +15,8 @@
       "note": "Damask rose • Patchouli • Musk",
       "price": 2999,
       "img": "https://images.unsplash.com/photo-1585218334450-afcf929da36e?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
-      "tag": "New"
+      "tag": "New",
+      "category": "perfumes"
     },
     {
       "id": "hp-amber-noir",
@@ -22,7 +24,8 @@
       "note": "Amber • Vanilla • Tonka",
       "price": 2799,
       "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
-      "tag": "Limited"
+      "tag": "Limited",
+      "category": "perfumes"
     },
     {
       "id": "hp-musk-silk",
@@ -30,7 +33,44 @@
       "note": "White musk • Iris • Cashmere",
       "price": 2299,
       "img": "https://images.unsplash.com/photo-1594125311687-3b1b3eafa9f4?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
-      "tag": "Classic"
+      "tag": "Classic",
+      "category": "perfumes"
+    },
+    {
+      "id": "attar-sultan",
+      "name": "Sultan Attar",
+      "note": "Sandalwood • Jasmine • Rose",
+      "price": 1999,
+      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+      "tag": "Best Seller",
+      "category": "attar"
+    },
+    {
+      "id": "attar-majestic",
+      "name": "Majestic Attar",
+      "note": "Oud • Spices • Musk",
+      "price": 2499,
+      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+      "tag": "New",
+      "category": "attar"
+    },
+    {
+      "id": "agarbatti-sandal",
+      "name": "Sandal Agarbatti",
+      "note": "Sandalwood • Floral",
+      "price": 499,
+      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+      "tag": "Classic",
+      "category": "agarbatti"
+    },
+    {
+      "id": "agarbatti-rose",
+      "name": "Rose Agarbatti",
+      "note": "Rose • Musk",
+      "price": 599,
+      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+      "tag": "New",
+      "category": "agarbatti"
     }
   ],
   "heroImages": [

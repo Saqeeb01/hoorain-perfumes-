@@ -9,6 +9,7 @@ export type Product = {
   price: number;
   img: string;
   tag: string;
+  category: string;
 };
 
 export function ProductGrid({

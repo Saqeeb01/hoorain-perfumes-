@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Section } from "../Section";
 import { LoginForm } from "../LoginForm";
 import { ProductManager } from "../ProductManager";
 import { Product } from "../ProductGrid";
 
-export function Admin({ products }: { products: Product[] }) {
+export function Admin() {
   const [loggedIn, setLoggedIn] = useState(false);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [heroImages, setHeroImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (loggedIn) {
+      fetch("http://localhost:3001/api/products")
+        .then((res) => res.json())
+        .then((data) => {
+          setProducts(data.products);
+          setHeroImages(data.heroImages);
+        })
+        .catch((err) => console.error("Error fetching data:", err));
+    }
+  }, [loggedIn]);
 
   const handleLogin = (password: string) => {
     if (password === "password") {
@@ -15,37 +29,40 @@ export function Admin({ products }: { products: Product[] }) {
     }
   };
 
-  const handleUpdate = (updatedProducts: Product[]) => {
-    const data = {
-      products: updatedProducts,
-      // I need to get the heroImages from somewhere. For now, I'll hardcode them.
-      heroImages: [
-        "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1920&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1608571424402-0a3c9e4c0b56?q=80&w=1920&auto=format&fit=crop",
-        "https://images.unsplash.com/photo-1541643600914-78b084683601?q=80&w=1920&auto=format&fit=crop",
-      ],
-    };
-
-    const json = JSON.stringify(data, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
-
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "data.json";
-    a.click();
-
-    URL.revokeObjectURL(url);
-
-    alert(
-      "data.json file has been downloaded. Please replace the existing file in the src directory."
-    );
+  const handleUpdate = (
+    updatedProducts: Product[],
+    updatedHeroImages: string[]
+  ) => {
+    fetch("http://localhost:3001/api/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        products: updatedProducts,
+        heroImages: updatedHeroImages,
+      }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        alert("Data updated successfully!");
+        setProducts(updatedProducts);
+        setHeroImages(updatedHeroImages);
+      })
+      .catch((err) => {
+        console.error("Error updating data:", err);
+        alert("Error updating data.");
+      });
   };
 
   return (
-    <Section title="Admin Panel" subtitle="Manage your products">
+    <Section title="Admin Panel" subtitle="Manage your products and images">
       {loggedIn ? (
-        <ProductManager products={products} onUpdate={handleUpdate} />
+        <ProductManager
+          products={products}
+          heroImages={heroImages}
+          onUpdate={handleUpdate}
+        />
       ) : (
         <LoginForm onLogin={handleLogin} />
       )}

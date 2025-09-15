@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Section } from "../Section";
 import { ProductGrid, Product } from "../ProductGrid";
 
@@ -9,13 +9,37 @@ export function Collections({
   addToCart: (id: string, qty?: number) => void;
   products: Product[];
 }) {
+  const [activeCategory, setActiveCategory] = useState("all");
+
+  const categories = ["all", "perfumes", "attar", "agarbatti"];
+
+  const filteredProducts =
+    activeCategory === "all"
+      ? products
+      : products.filter((p) => p.category === activeCategory);
+
   return (
     <div>
       <Section
         title="Collections"
         subtitle="Explore our best-sellers and limited editions."
       >
-        <ProductGrid addToCart={addToCart} products={products} />
+        <div className="flex justify-center gap-4 mb-8">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveCategory(category)}
+              className={`px-4 py-2 rounded-xl capitalize ${
+                activeCategory === category
+                  ? "bg-yellow-400 text-black"
+                  : "bg-white/10 text-yellow-200"
+              }`}
+            >
+              {category}
+            </button>
+          ))}
+        </div>
+        <ProductGrid addToCart={addToCart} products={filteredProducts} />
       </Section>
       <Section
         title="Gifting"
