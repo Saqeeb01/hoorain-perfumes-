@@ -1,5 +1,5 @@
-import React from "react";
-import { Page } from "../types";
+import React, { useState } from "react";
+import { Page, Category, categories } from "../types";
 import { classNames } from "../utils";
 import { ShoppingCart, User, Search } from "lucide-react";
 
@@ -10,10 +10,11 @@ export function NavBar({
   onCart,
 }: {
   page: Page;
-  openPage: (p: Page) => void;
+  openPage: (p: Page, category?: Category) => void;
   cartCount: number;
   onCart: () => void;
 }) {
+  const [showCollections, setShowCollections] = useState(false);
   const links: { key: Page; label: string }[] = [
     { key: "home", label: "Home" },
     { key: "collections", label: "Collections" },
@@ -26,30 +27,75 @@ export function NavBar({
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-20 items-center justify-between">
           <div className="flex-shrink-0">
-            <a href="#home" className="flex items-baseline gap-2" onClick={() => openPage("home")}>
-              <span className="font-serif text-3xl font-bold text-gold">Hoorain</span>
-              <span className="text-sm text-ivory/70 tracking-widest">PERFUMES</span>
+            <a
+              href="#home"
+              className="flex items-baseline gap-2"
+              onClick={() => openPage("home")}
+            >
+              <span className="font-serif text-3xl font-bold text-gold">
+                Hoorain
+              </span>
+              <span className="text-sm text-ivory/70 tracking-widest">
+                PERFUMES
+              </span>
             </a>
           </div>
           <nav className="hidden md:flex items-center gap-8">
-            {links.map((l) => (
-              <button
-                key={l.key}
-                onClick={() => openPage(l.key)}
-                className={classNames(
-                  "relative text-lg font-medium transition-colors duration-300",
-                  page === l.key ? "text-gold" : "text-ivory hover:text-gold"
-                )}
-              >
-                {l.label}
-                <span
-                  className={classNames(
-                    "absolute left-0 -bottom-1 h-0.5 bg-gold transition-all duration-300",
-                    page === l.key ? "w-full" : "w-0 group-hover:w-full"
+            {links.map((l) =>
+              l.key === "collections" ? (
+                <div
+                  key={l.key}
+                  className="relative"
+                  onMouseEnter={() => setShowCollections(true)}
+                  onMouseLeave={() => setShowCollections(false)}
+                >
+                  <button
+                    onClick={() => openPage(l.key)}
+                    className={classNames(
+                      "relative text-lg font-medium transition-colors duration-300",
+                      page === l.key
+                        ? "text-gold"
+                        : "text-ivory hover:text-gold"
+                    )}
+                  >
+                    {l.label}
+                  </button>
+                  {showCollections && (
+                    <div className="absolute top-full left-0 mt-2 w-48 bg-black/80 backdrop-blur-lg rounded-md shadow-lg">
+                      {categories.map((c) => (
+                        <a
+                          key={c}
+                          href={`#collections/${c}`}
+                          onClick={() => openPage("collections", c)}
+                          className="block px-4 py-2 text-sm text-ivory hover:bg-gold hover:text-black capitalize"
+                        >
+                          {c}
+                        </a>
+                      ))}
+                    </div>
                   )}
-                />
-              </button>
-            ))}
+                </div>
+              ) : (
+                <button
+                  key={l.key}
+                  onClick={() => openPage(l.key)}
+                  className={classNames(
+                    "relative text-lg font-medium transition-colors duration-300",
+                    page === l.key
+                      ? "text-gold"
+                      : "text-ivory hover:text-gold"
+                  )}
+                >
+                  {l.label}
+                  <span
+                    className={classNames(
+                      "absolute left-0 -bottom-1 h-0.5 bg-gold transition-all duration-300",
+                      page === l.key ? "w-full" : "w-0 group-hover:w-full"
+                    )}
+                  />
+                </button>
+              )
+            )}
           </nav>
           <div className="flex items-center gap-6">
             <button className="text-ivory hover:text-gold transition-colors">
@@ -58,7 +104,10 @@ export function NavBar({
             <button className="text-ivory hover:text-gold transition-colors">
               <User size={22} />
             </button>
-            <button onClick={onCart} className="relative text-ivory hover:text-gold transition-colors">
+            <button
+              onClick={onCart}
+              className="relative text-ivory hover:text-gold transition-colors"
+            >
               <ShoppingCart size={22} />
               {cartCount > 0 && (
                 <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-gold text-xs font-bold text-black">

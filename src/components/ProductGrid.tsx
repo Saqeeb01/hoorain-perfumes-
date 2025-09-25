@@ -45,7 +45,7 @@ export function ProductGrid({
           custom={i}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true }}
+          viewport={{ once: true, amount: 0.5 }}
         >
           <div className="relative overflow-hidden rounded-lg bg-white/5 border border-white/10 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20 group-hover:border-gold/50">
             <div className="overflow-hidden">
