@@ -16,6 +16,7 @@ import { Collections } from "./components/pages/Collections";
 import { Contact } from "./components/pages/Contact";
 import { Admin } from "./components/pages/Admin";
 import { CartDrawer } from "./components/CartDrawer";
+import { StickyCTA } from "./components/StickyCTA";
 
 import { Product } from "./components/ProductGrid";
 // --------- ROOT APP ---------
@@ -24,14 +25,12 @@ export default function HoorainPerfumes() {
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
-  const [heroImages, setHeroImages] = useState<string[]>([]);
 
   useEffect(() => {
     fetch("http://localhost:3001/api/products")
       .then((res) => res.json())
       .then((data) => {
         setProducts(data.products);
-        setHeroImages(data.heroImages);
       })
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
@@ -92,11 +91,7 @@ export default function HoorainPerfumes() {
         <AnimatePresence mode="wait">
           {page === "home" && (
             <PageShell key="home">
-              <Home
-                addToCart={addToCart}
-                products={products}
-                heroImages={heroImages}
-              />
+              <Home addToCart={addToCart} products={products} />
             </PageShell>
           )}
           {page === "about" && (
@@ -131,6 +126,7 @@ export default function HoorainPerfumes() {
         removeLine={removeLine}
         products={products}
       />
+      <StickyCTA />
     </div>
   );
 }

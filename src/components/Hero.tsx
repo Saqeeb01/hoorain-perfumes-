@@ -1,66 +1,61 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { classNames, goldText } from "../utils";
+import { classNames } from "../utils";
 
-export function Hero({ heroImages }: { heroImages: string[] }) {
+const heroImages = [
+  "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=80&w=1920&ixlib=rb-4.1.0",
+  "https://images.unsplash.com/photo-1523293182086-7651a899d37f?fm=jpg&q=80&w=1920&ixlib=rb-4.1.0",
+  "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1920&auto=format&fit=crop",
+];
+
+export function Hero() {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
-    const id = setInterval(
-      () => setIdx((i) => (i + 1) % heroImages.length),
-      4500
-    );
+    const id = setInterval(() => setIdx((i) => (i + 1) % heroImages.length), 4500);
     return () => clearInterval(id);
-  }, [heroImages.length]);
+  }, []);
+
   return (
-    <div className="relative">
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="relative h-[62vh] md:h-[70vh] overflow-hidden rounded-3xl border border-white/10">
-          <AnimatePresence mode="wait">
-            <motion.img
-              key={idx}
-              src={heroImages[idx]}
-              alt="Hoorain hero"
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.02 }}
-              transition={{ duration: 0.8 }}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-          </AnimatePresence>
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/40" />
-          <div className="absolute inset-x-0 bottom-0 p-6 md:p-10">
-            <div
-              className={classNames(
-                "font-serif text-3xl md:text-5xl mb-2",
-                goldText
-              )}
-            >
-              {" "}
-              Elevate Your Essence{" "}
-            </div>
-            <p className="max-w-xl text-yellow-50/85">
-              {" "}
-              Fine attars and perfumes crafted with oud, rose, amber and musk —
-              designed for lasting elegance in the Indian climate.{" "}
-            </p>
-            <div className="mt-5 flex gap-3">
-              <a
-                href="#collections"
-                className="px-5 py-2.5 rounded-xl bg-yellow-400 text-black font-semibold hover:brightness-95 transition"
-              >
-                {" "}
-                Shop Collections{" "}
-              </a>
-              <a
-                href="#about"
-                className="px-5 py-2.5 rounded-xl border border-yellow-400/40 hover:bg-white/5 transition"
-              >
-                {" "}
-                Our Story{" "}
-              </a>
-            </div>
-          </div>
-        </div>
+    <div className="relative h-[80vh] w-full overflow-hidden">
+      <AnimatePresence>
+        <motion.img
+          key={idx}
+          src={heroImages[idx]}
+          alt="Hoorain hero"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 1.5 }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+      <div className="absolute inset-0 bg-black/60" />
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="font-serif text-5xl md:text-7xl text-ivory"
+        >
+          Hoorain Perfumes
+        </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="mt-4 text-lg md:text-xl text-ivory/80"
+        >
+          Where Fragrance Meets Elegance
+        </motion.p>
+        <motion.a
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          href="#collections"
+          className="mt-8 px-8 py-3 font-semibold text-black bg-gold rounded-full transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/30"
+        >
+          Shop Now
+        </motion.a>
       </div>
     </div>
   );
