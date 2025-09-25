@@ -1,12 +1,8 @@
-import React, { useEffect, useMemo, useRef, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Page, pages } from "./types";
-import { classNames, goldBorder, goldText, glass } from "./utils";
+import React, { useEffect, useMemo, useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import { Page, pages, Category, categories } from "./types";
 import { NavBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
-import { ProductGrid } from "./components/ProductGrid";
-import { Section } from "./components/Section";
-import data from "./data.json";
 import { SiteBackdrop } from "./components/SiteBackdrop";
 import { TopBar } from "./components/TopBar";
 import { PageShell } from "./components/PageShell";
@@ -17,11 +13,11 @@ import { Contact } from "./components/pages/Contact";
 import { Admin } from "./components/pages/Admin";
 import { CartDrawer } from "./components/CartDrawer";
 import { StickyCTA } from "./components/StickyCTA";
-
 import { Product } from "./components/ProductGrid";
-// --------- ROOT APP ---------
+
 export default function HoorainPerfumes() {
   const [page, setPage] = useState<Page>("home");
+  const [category, setCategory] = useState<Category>("all");
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>([]);
@@ -35,19 +31,24 @@ export default function HoorainPerfumes() {
       .catch((err) => console.error("Error fetching data:", err));
   }, []);
 
-  // Simple hash routing (no extra deps)
   useEffect(() => {
     const applyFromHash = () => {
-      const h = (location.hash.replace("#", "") || "home") as Page;
-      setPage(pages.includes(h as Page) ? (h as Page) : "home");
+      const hash = location.hash.replace("#", "") || "home";
+      const [page, category] = hash.split("/");
+      setPage(pages.includes(page as Page) ? (page as Page) : "home");
+      setCategory(
+        categories.includes(category as Category)
+          ? (category as Category)
+          : "all"
+      );
     };
     applyFromHash();
     window.addEventListener("hashchange", applyFromHash);
     return () => window.removeEventListener("hashchange", applyFromHash);
   }, []);
 
-  const openPage = (p: Page) => {
-    if (page !== p) location.hash = `#${p}`;
+  const openPage = (p: Page, c: Category = "all") => {
+    location.hash = c ? `#${p}/${c}` : `#${p}`;
   };
 
   const cartCount = cart.reduce((a, c) => a + c.qty, 0);
@@ -101,7 +102,11 @@ export default function HoorainPerfumes() {
           )}
           {page === "collections" && (
             <PageShell key="collections">
-              <Collections addToCart={addToCart} products={products} />
+              <Collections
+                addToCart={addToCart}
+                products={products}
+                category={category}
+              />
             </PageShell>
           )}
           {page === "contact" && (
