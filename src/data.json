@@ -40,8 +40,8 @@
       "id": "attar-sultan",
       "name": "Sultan Attar",
       "note": "Sandalwood • Jasmine • Rose",
-      "price": 1999,
-      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+      "price": 2199,
+      "img": "https://images.unsplash.com/photo-1598122353381-5de40c128434?q=80&w=1200&auto=format&fit=crop",
       "tag": "Best Seller",
       "category": "attar"
     },
@@ -49,8 +49,17 @@
       "id": "attar-majestic",
       "name": "Majestic Attar",
       "note": "Oud • Spices • Musk",
-      "price": 2499,
-      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+      "price": 2699,
+      "img": "https://images.unsplash.com/photo-1615751249733-14c315a1a1f0?q=80&w=1200&auto=format&fit=crop",
+      "tag": "New",
+      "category": "attar"
+    },
+    {
+      "id": "attar-musk-safi",
+      "name": "Musk Safi",
+      "note": "Pure Musk",
+      "price": 1999,
+      "img": "/images/attar.jpg",
       "tag": "New",
       "category": "attar"
     },
