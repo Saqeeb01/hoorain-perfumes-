@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from "react";
+import React, { useMemo, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Page, pages, Category, categories } from "./types";
 import { NavBar } from "./components/NavBar";
@@ -14,22 +14,14 @@ import { Admin } from "./components/pages/Admin";
 import { CartDrawer } from "./components/CartDrawer";
 import { StickyCTA } from "./components/StickyCTA";
 import { Product } from "./components/ProductGrid";
+import productData from "./data.json";
 
 export default function HoorainPerfumes() {
   const [page, setPage] = useState<Page>("home");
   const [category, setCategory] = useState<Category>("all");
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    fetch("http://localhost:3001/api/products")
-      .then((res) => res.json())
-      .then((data) => {
-        setProducts(data.products);
-      })
-      .catch((err) => console.error("Error fetching data:", err));
-  }, []);
+  const [products, setProducts] = useState<Product[]>(productData.products);
 
   useEffect(() => {
     const applyFromHash = () => {
