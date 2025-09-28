@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { classNames } from "../utils";
 import { Plus } from "lucide-react";
+import { Page } from "../types";
 
 export type Product = {
   id: string;
@@ -29,18 +30,22 @@ export function ProductGrid({
   addToCart,
   limit,
   products,
+  openPage,
 }: {
   addToCart: (id: string, qty?: number) => void;
   limit?: number;
   products: Product[];
+  openPage: (page: Page, param?: string) => void;
 }) {
   const items = limit ? products.slice(0, limit) : products;
+
   return (
     <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
       {items.map((p, i) => (
         <motion.div
           key={p.id}
-          className="group relative"
+          className="group relative cursor-pointer"
+          onClick={() => openPage("product", p.id)}
           variants={cardVariants}
           custom={i}
           initial="hidden"
