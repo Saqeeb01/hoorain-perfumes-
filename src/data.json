@@ -1,85 +1,85 @@
 {
   "products": [
     {
-      "id": "hp-oud-royale",
-      "name": "Oud Royale",
-      "note": "Smoky oud • Amber • Saffron",
-      "price": 3499,
-      "img": "./components/pages/images/attar.jpg",
+      "id": "bellavita-ceo-men",
+      "name": "CEO Man Perfume",
+      "note": "Ambergris | Lemon | Musk",
+      "price": 599,
+      "img": "../public/images/perfumes/P-bellavita-CEO-man.jpg",
       "tag": "Best Seller",
       "category": "perfumes"
     },
     {
-      "id": "hp-rose-velour",
-      "name": "Rose Velour",
-      "note": "Damask rose • Patchouli • Musk",
-      "price": 2999,
-      "img": "https://images.unsplash.com/photo-1585218334450-afcf929da36e?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "bellavita-honey-oudh",
+      "name": "Honey Oudh",
+      "note": "Ambergris | Honey | Oud",
+      "price": 599,
+      "img": "../public/images/perfumes/bellavita-honey-oud.jpg",
       "tag": "New",
       "category": "perfumes"
     },
     {
-      "id": "hp-amber-noir",
-      "name": "Amber Noir",
-      "note": "Amber • Vanilla • Tonka",
-      "price": 2799,
-      "img": "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
+      "id": "bellavita-glam-women",
+      "name": "Glam Women",
+      "note": "orange peel | rose | Vanilla",
+      "price": 599,
+      "img": "../public/images/perfumes/P-bellavita-glam-women.jpg",
       "tag": "Limited",
       "category": "perfumes"
     },
-    {
-      "id": "hp-musk-silk",
-      "name": "Musk Silk",
-      "note": "White musk • Iris • Cashmere",
-      "price": 2299,
-      "img": "https://images.unsplash.com/photo-1594125311687-3b1b3eafa9f4?fm=jpg&q=60&w=1200&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGVyZnVtZSUyMGJvdHRsZXxlbnwwfHwwfHx8MA%3D%3D",
-      "tag": "Classic",
+     {
+      "id": "bellavita-fresh",
+      "name": "Fresh Unisex",
+      "note": "Lavender| Citrus, Floral",
+      "price": 599,
+      "img": "../public/images/perfumes/P-bellavita-fresh.jpg",
+      "tag": "New",
       "category": "perfumes"
     },
     {
-      "id": "attar-sultan",
-      "name": "Sultan Attar",
+      "id": "patel-neck",
+      "name": "Patel Neck",
       "note": "Sandalwood • Jasmine • Rose",
-      "price": 2199,
-      "img": "https://images.unsplash.com/photo-1598122353381-5de40c128434?q=80&w=1200&auto=format&fit=crop",
+      "price": 470,
+      "img": "../public/images/perfumes/patel-neck.jpg",
       "tag": "Best Seller",
-      "category": "attar"
+      "category": "perfumes"
     },
     {
-      "id": "attar-majestic",
-      "name": "Majestic Attar",
-      "note": "Oud • Spices • Musk",
-      "price": 2699,
-      "img": "https://images.unsplash.com/photo-1615751249733-14c315a1a1f0?q=80&w=1200&auto=format&fit=crop",
+      "id": "patel-neck-black",
+      "name": "Patel Neck Black",
+      "note": "Oud • Spices • Jasmine",
+      "price": 470,
+      "img": "../public/images/perfumes/patel-neck-black.jpg",
       "tag": "New",
-      "category": "attar"
+      "category": "perfumes"
     },
     {
-      "id": "attar-musk-safi",
-      "name": "Musk Safi",
-      "note": "Pure Musk",
-      "price": 1999,
-      "img": "/images/attar.jpg",
+      "id": "patel-neck-just",
+      "name": "Patel Neck Just",
+      "note": "Sandalwood • Spices • Musk",
+      "price": 400,
+      "img": "../public/images/perfumes/patel-neck-just.jpg",
       "tag": "New",
-      "category": "attar"
+      "category": "perfumes"
     },
-    {
-      "id": "agarbatti-sandal",
-      "name": "Sandal Agarbatti",
-      "note": "Sandalwood • Floral",
-      "price": 499,
-      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
-      "tag": "Classic",
-      "category": "agarbatti"
-    },
-    {
-      "id": "agarbatti-rose",
-      "name": "Rose Agarbatti",
-      "note": "Rose • Musk",
-      "price": 599,
-      "img": "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1200&auto=format&fit=crop",
+    
+     {
+      "id": "patel-neck-sukhad",
+      "name": "Patel Neck Sukhad",
+      "note": "Oud • Sandalwood ",
+      "price": 470,
+      "img": "../public/images/perfumes/patel-sukhad.jpg",
       "tag": "New",
-      "category": "agarbatti"
+      "category": "perfumes"
+    },{
+      "id": "patel-london-white",
+      "name": "Patel London White",
+      "note": "citrus • melon • Musk",
+      "price": 400,
+      "img": "../public/images/perfumes/patel-london-white copy.jpg",
+      "tag": "New",
+      "category": "perfumes"
     }
   ],
   "heroImages": [

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Page, pages, Category, categories } from "./types";
 import { NavBar } from "./components/NavBar";
