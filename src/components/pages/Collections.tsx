@@ -1,16 +1,18 @@
 import React from "react";
 import { Section } from "../Section";
 import { ProductGrid, Product } from "../ProductGrid";
-import { Category } from "../../types";
+import { Category, Page } from "../../types";
 
 export function Collections({
   addToCart,
   products,
   category,
+  openPage,
 }: {
   addToCart: (id: string, qty?: number) => void;
   products: Product[];
   category: Category;
+  openPage: (page: Page, param?: string) => void;
 }) {
   const filteredProducts =
     category === "all"
@@ -23,7 +25,11 @@ export function Collections({
         title="Collections"
         subtitle="Explore our best-sellers and limited editions."
       >
-        <ProductGrid addToCart={addToCart} products={filteredProducts} />
+        <ProductGrid
+          addToCart={addToCart}
+          products={filteredProducts}
+          openPage={openPage}
+        />
       </Section>
       <Section
         title="Gifting"

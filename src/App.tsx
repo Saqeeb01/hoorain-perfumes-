@@ -11,6 +11,7 @@ import { About } from "./components/pages/About";
 import { Collections } from "./components/pages/Collections";
 import { Contact } from "./components/pages/Contact";
 import { Admin } from "./components/pages/Admin";
+import { SingleProduct } from "./components/pages/SingleProduct";
 import { CartDrawer } from "./components/CartDrawer";
 import { StickyCTA } from "./components/StickyCTA";
 import { Product } from "./components/ProductGrid";
@@ -19,28 +20,36 @@ import productData from "./data.json";
 export default function HoorainPerfumes() {
   const [page, setPage] = useState<Page>("home");
   const [category, setCategory] = useState<Category>("all");
+  const [selectedProductId, setSelectedProductId] = useState<string | null>(
+    null
+  );
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [products, setProducts] = useState<Product[]>(productData.products);
+  const [products, setProducts] = useState<Product[]>(
+    productData.products.reverse()
+  );
 
   useEffect(() => {
     const applyFromHash = () => {
       const hash = location.hash.replace("#", "") || "home";
-      const [page, category] = hash.split("/");
-      setPage(pages.includes(page as Page) ? (page as Page) : "home");
-      setCategory(
-        categories.includes(category as Category)
-          ? (category as Category)
-          : "all"
-      );
+      const [page, param] = hash.split("/");
+      if (page === "product" && param) {
+        setPage("product");
+        setSelectedProductId(param);
+      } else {
+        setPage(pages.includes(page as Page) ? (page as Page) : "home");
+        setCategory(
+          categories.includes(param as Category) ? (param as Category) : "all"
+        );
+      }
     };
     applyFromHash();
     window.addEventListener("hashchange", applyFromHash);
     return () => window.removeEventListener("hashchange", applyFromHash);
   }, []);
 
-  const openPage = (p: Page, c: Category = "all") => {
-    location.hash = c ? `#${p}/${c}` : `#${p}`;
+  const openPage = (p: Page, param?: Category | string) => {
+    location.hash = param ? `#${p}/${param}` : `#${p}`;
   };
 
   const cartCount = cart.reduce((a, c) => a + c.qty, 0);
@@ -84,7 +93,11 @@ export default function HoorainPerfumes() {
         <AnimatePresence mode="wait">
           {page === "home" && (
             <PageShell key="home">
-              <Home addToCart={addToCart} products={products} />
+              <Home
+                addToCart={addToCart}
+                products={products}
+                openPage={openPage}
+              />
             </PageShell>
           )}
           {page === "about" && (
@@ -98,6 +111,7 @@ export default function HoorainPerfumes() {
                 addToCart={addToCart}
                 products={products}
                 category={category}
+                openPage={openPage}
               />
             </PageShell>
           )}
@@ -109,6 +123,14 @@ export default function HoorainPerfumes() {
           {page === "admin" && (
             <PageShell key="admin">
               <Admin />
+            </PageShell>
+          )}
+          {page === "product" && selectedProductId && (
+            <PageShell key="product">
+              <SingleProduct
+                addToCart={addToCart}
+                product={products.find((p) => p.id === selectedProductId)!}
+              />
             </PageShell>
           )}
         </AnimatePresence>
