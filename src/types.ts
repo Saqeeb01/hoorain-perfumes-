@@ -4,6 +4,7 @@ export const pages = [
   "collections",
   "contact",
   "admin",
+  "product",
 ] as const;
 export type Page = (typeof pages)[number];
 
