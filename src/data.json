@@ -5,7 +5,7 @@
       "name": "CEO Man Perfume",
       "note": "Ambergris | Lemon | Musk",
       "price": 599,
-      "img": "/images/perfumes/P-bellavita-CEO-man.jpg",
+      "img": "../public/images/perfumes/P-bellavita-CEO-man.jpg",
       "tag": "Best Seller",
       "category": "perfumes"
     },
@@ -14,7 +14,7 @@
       "name": "Honey Oudh",
       "note": "Ambergris | Honey | Oud",
       "price": 599,
-      "img": "/images/perfumes/bellavita-honey-oud.jpg",
+      "img": "../public/images/perfumes/bellavita-honey-oud.jpg",
       "tag": "New",
       "category": "perfumes"
     },
@@ -23,43 +23,15 @@
       "name": "Glam Women",
       "note": "orange peel | rose | Vanilla",
       "price": 599,
-      "img": "/images/perfumes/P-bellavita-glam-women.jpg",
+      "img": "../public/images/perfumes/P-bellavita-glam-women.jpg",
       "tag": "Limited",
       "category": "perfumes"
     },
+
     {
       "id": "bellavita-fresh",
       "name": "Fresh Unisex",
       "note": "Lavender| Citrus, Floral",
-      "price": 599,
-      "img": "/images/perfumes/P-bellavita-fresh.jpg",
-      "tag": "New",
-      "category": "perfumes"
-    },
-    {
-      "id": "patel-neck",
-      "name": "Patel Neck",
-      "note": "Sandalwood • Jasmine • Rose",
-      "price": 470,
-      "img": "/images/perfumes/patel-neck.jpg",
-      "tag": "Best Seller",
-      "category": "perfumes"
-    },
-    {
-      "id": "patel-neck-black",
-      "name": "Patel Neck Black",
-      "note": "Oud • Spices • Jasmine",
-      "price": 470,
-      "img": "/images/perfumes/patel-neck-black.jpg",
-      "tag": "New",
-      "category": "perfumes"
-    },
-    {
-      "id": "patel-neck-just",
-      "name": "Patel Neck Just",
-      "note": "Sandalwood • Spices • Musk",
-      "price": 400,
-      "img": "/images/perfumes/patel-neck-just.jpg",
       "tag": "New",
       "category": "perfumes"
     },
@@ -67,26 +39,6 @@
       "id": "patel-neck-sukhad",
       "name": "Patel Neck Sukhad",
       "note": "Oud • Sandalwood ",
-      "price": 470,
-      "img": "/images/perfumes/patel-sukhad.jpg",
-      "tag": "New",
-      "category": "perfumes"
-    },
-    {
-      "id": "patel-london-white",
-      "name": "Patel London White",
-      "note": "citrus • melon • Musk",
-      "price": 400,
-      "img": "/images/perfumes/patel-london-white copy.jpg",
-      "tag": "New",
-      "category": "perfumes"
-    },
-    {
-      "id": "patel-classic-protect",
-      "name": "Patel Classic Protect",
-      "note": "citrus • Musk",
-      "price": 239,
-      "img": "/images/perfumes/P-patel-Classic-Protect.jpg",
       "tag": "New",
       "category": "perfumes"
     },
@@ -94,8 +46,6 @@
       "id": "patel-classic-prince",
       "name": "Patel Classic Prince",
       "note": "orange",
-      "price": 239,
-      "img": "/images/perfumes/P-patel-prince.jpg",
       "tag": "New",
       "category": "perfumes"
     },
@@ -103,8 +53,6 @@
       "id": "patel-classic-premium",
       "name": "Patel Classic Premium",
       "note": "sandlwood",
-      "price": 239,
-      "img": "/images/perfumes/P-patel-cl-PREMIUM.jpg",
       "tag": "New",
       "category": "perfumes"
     },
@@ -112,8 +60,6 @@
       "id": "patel-holiday",
       "name": "Patel Holiday ",
       "note": "citrus",
-      "price": 239,
-      "img": "/images/perfumes/P-patel-holiday.jpg",
       "tag": "New",
       "category": "perfumes"
     },
@@ -122,17 +68,206 @@
       "name": "Patel Today ",
       "note": "citrus • Spices • Musk",
       "price": 239,
-      "img": "/images/perfumes/patel-today.jpg",
+      "img": "../public/images/perfumes/patel-today.jpg",
       "tag": "New",
       "category": "perfumes"
     },
     {
-      "id": "Ramsons-delano",
+      "id": "Ramsons Delano",
       "name": "Ramsons Delano ",
       "note": "citrus • Apple • Cinnamon",
-      "price":650,
+      "price": 650,
       "img": "../public/images/perfumes/DELANO-ramsons.jpg",
-      "tag": "New",
+      "tag": "Best Seller",
+      "category": "perfumes"
+    },
+    {
+      "id": "ramsons-lucas",
+      "name": "Ramsons Lucas ",
+      "note": "  citrus • aqua • Herbal",
+      "price": 650,
+      "img": "../public/images/perfumes/LUCAS-ramsons.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "ramsons-exotica",
+      "name": "Ramsons Exotica ",
+      "note": " aqua • citrus",
+      "price": 249,
+      "img": "../public/images/perfumes/EXOTICA-ramsons.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "ramsons-red-zx",
+      "name": "Ramsons Red-ZX ",
+      "note": " fresh • ice",
+      "price": 189,
+      "img": "../public/images/perfumes/Ramsons-RED-zx.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "viwa-sandal",
+      "name": " Viwa Sandal",
+      "note": " sandalwood ",
+      "price": 189,
+      "img": "../public/images/perfumes/P-VIWA-sandal.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "viwa-rose",
+      "name": "Viwa Rose",
+      "note": " Rose ",
+      "price": 189,
+      "img": "../public/images/perfumes/P-VIWA-Rose.jpg.webp",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "cr7",
+      "name": "CR7 Game",
+      "note": "citrus • Spices • Musk",
+      "price": 225,
+      "img": "../public/images/perfumes/P-CR_7.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "hp-gold",
+      "name": "HP Gold",
+      "note": " Spices • citrus",
+      "price": 265,
+      "img": "../public/images/perfumes/P-hp-gold-100ml.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "x-drax",
+      "name": "X Drax",
+      "note": " Spices • Rose",
+      "price": 271,
+      "img": "../public/images/perfumes/P-drax-X.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "blackberry",
+      "name": "St Louis Blackberry",
+      "note": " Fresh • Rose • Oud • Berries",
+      "price": 399,
+      "img": "../public/images/perfumes/blackberry.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "whiteberry",
+      "name": "St Louis Whiteberry",
+      "note": " Berries • Rose • white • Fresh",
+      "price": 280,
+      "img": "../public/images/perfumes/P-whiteberry.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "something-something",
+      "name": "Something Something",
+      "note": "  Rose  • Fresh",
+      "price": 210,
+      "img": "../public/images/perfumes/P-smthg-smthng.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "vmj-las-vegas",
+      "name": "Las Vegas",
+      "note": "  Oudh  • aquatic • Breeze ",
+      "price": 585,
+      "img": "../public/images/perfumes/P-VMJ.JPG",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "vmj-times",
+      "name": "Times Square",
+      "note": "Woody • Breeze ",
+      "price": 585,
+      "img": "../public/images/perfumes/P-VMJ-TImes square brown.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "vmj-times-square",
+      "name": "VMJ Times Square",
+      "note": "Fresh • Blue ",
+      "price": 585,
+      "img": "../public/images/perfumes/P-VMJ-Times-Square.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "ossa-magnet",
+      "name": "Ossa Magnet",
+      "note": "woody • melon  •   citrus ",
+      "price": 340,
+      "img": "../public/images/perfumes/P-ossa-MAGNET.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "aro-magnet",
+      "name": "Aro Magnet",
+      "note": "melon • citrus • musk ",
+      "price": 549,
+      "img": "../public/images/perfumes/P-aro-Magnet.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "nuroma",
+      "name": "NUROMA Explore",
+      "note": "pachouli •  musk ",
+      "price": 549,
+      "img": "../public/images/perfumes/P-nuroma.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "osr-girl",
+      "name": "OSR Girl",
+      "note": " musk • fresh ",
+      "price": 549,
+      "img": "../public/images/perfumes/Osr-girl.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "786-oudh",
+      "name": "786 Oudh",
+      "note": " Oudh • Musk ",
+      "price": 225,
+      "img": "../public/images/perfumes/P-786-oudh.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+    {
+      "id": "aco-shirli",
+      "name": "ACO shirli",
+      "note": " woody • melon ",
+      "price": 225,
+      "img": "../public/images/perfumes/P-ACO-shirlie.jpg",
+      "tag": "new ",
+      "category": "perfumes"
+    },
+
+    {
+      "id": "attar-patel-neck",
+      "name": "Patel neck Attar",
+      "price": 149,
+      "img": "../public/images/perfumes/P-ACO-shirlie.jpg",
+      "tag": "new ",
       "category": "perfumes"
     }
   ],
