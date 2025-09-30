@@ -633,7 +633,8 @@
       "price": 249,
       "img": "../public/images/attars/zamzam.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     }
   ],
 

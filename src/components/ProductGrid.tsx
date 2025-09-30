@@ -12,6 +12,7 @@ export type Product = {
   img: string;
   tag: string;
   category: string;
+  quantity?: string;
 };
 
 const cardVariants = {
@@ -62,6 +63,9 @@ export function ProductGrid({
             </div>
             <div className="p-5">
               <h3 className="font-serif text-2xl text-ivory">{p.name}</h3>
+              {p.quantity && (
+                <p className="text-sm text-ivory/70">{p.quantity}</p>
+              )}
               <p className="text-sm text-ivory/70 mt-1">{p.note}</p>
               <div className="flex justify-between items-center mt-4">
                 <p className="text-xl font-semibold text-gold">
