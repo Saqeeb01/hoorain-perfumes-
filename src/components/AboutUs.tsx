@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const aboutImage = "https://images.unsplash.com/photo-1556742523-8099b115df74?q=80&w=1920&auto=format&fit=crop";
+const aboutImage = "../../public/images/perfumes/blackberry.jpg";
 
 export function AboutUs() {
   return (
@@ -27,7 +27,10 @@ export function AboutUs() {
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          Hoorain Perfumes is a family-owned business dedicated to the art of perfumery. We blend traditional Arabic techniques with modern sensibilities to create unique and captivating fragrances that tell a story.
+          Hoorain Perfumes is a family-owned business dedicated to the art of
+          perfumery. We blend traditional Arabic techniques with modern
+          sensibilities to create unique and captivating fragrances that tell a
+          story.
         </motion.p>
         <motion.a
           href="#about"
