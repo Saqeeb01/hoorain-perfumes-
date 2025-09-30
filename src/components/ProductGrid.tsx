@@ -47,7 +47,7 @@ export function ProductGrid({
           className="group relative cursor-pointer"
           onClick={() => openPage("product", p.id)}
           variants={cardVariants}
-          custom={i}
+          custom={i % 8}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }}

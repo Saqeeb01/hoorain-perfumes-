@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Section } from "../Section";
 import { ProductGrid, Product } from "../ProductGrid";
 import { Category, Page } from "../../types";
+
+const BATCH_SIZE = 8;
 
 export function Collections({
   addToCart,
@@ -14,10 +16,42 @@ export function Collections({
   category: Category;
   openPage: (page: Page, param?: string) => void;
 }) {
+  const [visibleCount, setVisibleCount] = useState(BATCH_SIZE);
+  const loader = useRef(null);
+
   const filteredProducts =
     category === "all"
       ? products
       : products.filter((p) => p.category === category);
+
+  const handleObserver = (entities: IntersectionObserverEntry[]) => {
+    const target = entities[0];
+    if (target.isIntersecting) {
+      setVisibleCount((prev) =>
+        Math.min(prev + BATCH_SIZE, filteredProducts.length)
+      );
+    }
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(handleObserver, {
+      root: null,
+      rootMargin: "20px",
+      threshold: 0.1,
+    });
+    if (loader.current) {
+      observer.observe(loader.current);
+    }
+    return () => {
+      if (loader.current) {
+        observer.unobserve(loader.current);
+      }
+    };
+  }, [loader.current, filteredProducts.length]);
+
+  useEffect(() => {
+    setVisibleCount(BATCH_SIZE);
+  }, [category]);
 
   return (
     <div>
@@ -27,8 +61,15 @@ export function Collections({
       >
         <ProductGrid
           addToCart={addToCart}
-          products={filteredProducts}
+          products={filteredProducts.slice(0, visibleCount)}
           openPage={openPage}
+        />
+        <div
+          ref={loader}
+          data-testid="infinite-scroll-loader"
+          className={
+            visibleCount >= filteredProducts.length ? "h-0" : "h-20"
+          }
         />
       </Section>
       <Section
