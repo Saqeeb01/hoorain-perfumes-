@@ -55,7 +55,7 @@ export function ProductGrid({
           <div className="relative overflow-hidden rounded-lg bg-white/5 border border-white/10 transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-gold/20 group-hover:border-gold/50">
             <div className="overflow-hidden">
               <img
-                src={p.img}
+                src={p.img || ""}
                 alt={p.name}
                 className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
               />
@@ -65,10 +65,13 @@ export function ProductGrid({
               <p className="text-sm text-ivory/70 mt-1">{p.note}</p>
               <div className="flex justify-between items-center mt-4">
                 <p className="text-xl font-semibold text-gold">
-                  ₹{p.price.toLocaleString("en-IN")}
+                  {p.price ? `₹${p.price.toLocaleString("en-IN")}` : "Price not available"}
                 </p>
                 <button
-                  onClick={() => addToCart(p.id, 1)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    addToCart(p.id, 1);
+                  }}
                   className="w-10 h-10 flex items-center justify-center bg-gold text-black rounded-full transition-all duration-300 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 hover:bg-gold-light"
                 >
                   <Plus size={20} />

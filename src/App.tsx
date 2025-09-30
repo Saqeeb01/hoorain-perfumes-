@@ -26,7 +26,7 @@ export default function HoorainPerfumes() {
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [products, setProducts] = useState<Product[]>(
-    productData.products.reverse()
+    [...productData.products].reverse()
   );
 
   useEffect(() => {
