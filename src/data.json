@@ -23,7 +23,7 @@
       "name": "Glam Women",
       "note": "orange peel | rose | Vanilla",
       "price": 599,
-      "img": "/images/perfumes/P-bellavita-glam-women.jpg",
+      "img": "../public/images/perfumes/P-bellavita-glam-women.jpg",
       "tag": "Limited",
       "category": "perfumes"
     },
@@ -32,12 +32,14 @@
       "id": "bellavita-fresh",
       "name": "Fresh Unisex",
       "note": "Lavender| Citrus, Floral",
+      "img": "../public/images/perfumes/P-bellavita-fresh.jpg",
       "tag": "New",
       "category": "perfumes"
     },
     {
       "id": "patel-neck-sukhad",
       "name": "Patel Neck Sukhad",
+      "img": "../public/images/perfumes/patel-sukhad.jpg",
       "note": "Oud • Sandalwood ",
       "tag": "New",
       "category": "perfumes"
@@ -45,6 +47,7 @@
     {
       "id": "patel-classic-prince",
       "name": "Patel Classic Prince",
+      "img": "../public/images/perfumes/P-patel-prince.jpg",
       "note": "orange",
       "tag": "New",
       "category": "perfumes"
@@ -52,6 +55,7 @@
     {
       "id": "patel-classic-premium",
       "name": "Patel Classic Premium",
+      "img": "../public/images/perfumes/P-patel-cl-PREMIUM.jpg",
       "note": "sandlwood",
       "tag": "New",
       "category": "perfumes"
@@ -59,6 +63,7 @@
     {
       "id": "patel-holiday",
       "name": "Patel Holiday ",
+      "img": "../public/images/perfumes/P-patel-holiday.jpg",
       "note": "citrus",
       "tag": "New",
       "category": "perfumes"
@@ -67,8 +72,8 @@
       "id": "patel-today",
       "name": "Patel Today ",
       "note": "citrus • Spices • Musk",
-      "price": 239,
       "img": "/images/perfumes/patel-today.jpg",
+      "price": 239,
       "tag": "New",
       "category": "perfumes"
     },
@@ -266,9 +271,369 @@
       "id": "attar-patel-neck",
       "name": "Patel neck Attar",
       "price": 149,
-      "img": "/images/perfumes/P-ACO-shirlie.jpg",
+      "img": "../public/images/attars/pate-neck.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "attar"
+    },
+    {
+      "id": "musk-ajmeri",
+      "name": "Musk Ajmeri",
+      "price": 248,
+      "img": "../public/images/attars/musk ajmeri.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "tohfa",
+      "name": "Tohfa",
+      "price": 259,
+      "img": "../public/images/attars/tohfa-attar.jpg",
+      "tag": "Best Seller",
+      "category": "attar"
+    },
+    {
+      "id": "friday",
+      "name": "Friday",
+      "price": 249,
+      "img": "../public/images/attars/friday-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "urban-shade",
+      "name": "Urban Shade",
+      "price": 249,
+      "img": "../public/images/attars/urban-shade.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "musk-sapphire",
+      "name": "Musk Sapphire",
+      "price": 199,
+      "img": "../public/images/attars/musk-saphhire.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "mountain-water",
+      "name": "Mountain Water",
+      "price": 199,
+      "img": "../public/images/attars/mountain-water.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "white-oudh-alburooj",
+      "name": "White Oudh",
+      "price": 199,
+      "img": "../public/images/attars/white-oudh.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "samawi",
+      "name": "Samawi",
+      "price": 199,
+      "img": "../public/images/attars/samawi.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "srf-attarful",
+      "name": "Attarfull Mogra",
+      "price": 99,
+      "img": "../public/images/attars/ahsan-attarful.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "black-touch",
+      "name": "Black Touch ",
+      "price": 129,
+      "img": "../public/images/attars/BlackTouch6mlL.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "rhymes",
+      "name": "Rhymes",
+      "price": 129,
+      "img": "../public/images/attars/rhymes.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "555",
+      "name": "555 Attar",
+      "price": 100,
+      "img": "../public/images/attars/555-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "24-caret",
+      "name": "24 Caret",
+      "price": 100,
+      "img": "../public/images/attars/24_Caret_6ml.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "aayat",
+      "name": "Aayat",
+      "price": 219,
+      "img": "../public/images/attars/aayat.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "aaisha",
+      "name": "Aisha",
+      "price": 280,
+      "img": "../public/images/attars/AIASHA-20ml.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "aro-magnet",
+      "name": "Aro Magnet",
+      "price": 100,
+      "img": "../public/images/attars/aro-magnet.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "best",
+      "name": "Al-Nuaim Best ",
+      "price": 100,
+      "img": "../public/images/attars/best-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "black-musk-almas",
+      "name": "Black Musk",
+      "price": 100,
+      "img": "../public/images/attars/black-musk-almas.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "deeds",
+      "name": "Deeds",
+      "price": 100,
+      "img": "../public/images/attars/deeds.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "krs-nayaab",
+      "name": "KRS Nayaab",
+      "price": 120,
+      "img": "../public/images/attars/krs-nayab.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "aayat",
+      "name": "Aayat",
+      "price": 219,
+      "img": "../public/images/attars/aayat.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "laila",
+      "name": "Laila",
+      "price": 140,
+      "img": "../public/images/attars/laila-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "blac-musk",
+      "name": "Black Musk",
+      "price": 100,
+      "img": "../public/images/attars/black-musk-alnuaim.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "black-orchid",
+      "name": "Black Orchid",
+      "price": 199,
+      "img": "../public/images/attars/black-orchid.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "chandan",
+      "name": "Balaji Chandan",
+      "price": 425,
+      "img": "../public/images/attars/chandan-balaji-8ml.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "choclate",
+      "name": "Choclate",
+      "price": 100,
+      "img": "../public/images/attars/choclate-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "cobra",
+      "name": "Cobra",
+      "price": 100,
+      "img": "../public/images/attars/cobra-al-nuaim.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "deeds-black",
+      "name": "Deeds",
+      "price": 100,
+      "img": "../public/images/attars/deeds-black.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "gilaf",
+      "name": "GIlaf",
+      "price": 280,
+      "img": "../public/images/attars/gilaf.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "green-ajmeri",
+      "name": "Green Ajmeri",
+      "price": 199,
+      "img": "../public/images/attars/green-ajmeri.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "ice-berg",
+      "name": "Iceberg",
+      "price": 100,
+      "img": "../public/images/attars/iceberg-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "musk-rizali",
+      "name": "Musk Rizali",
+      "price": 100,
+      "img": "../public/images/attars/MuskRizali6mlL.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "pro-cigar",
+      "name": "Pro Cigar",
+      "price": 100,
+      "img": "../public/images/attars/pro-cigar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "raees",
+      "name": "Raees",
+      "price": 280,
+      "img": "../public/images/attars/raees.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "red-zx",
+      "name": "Red-ZX",
+      "price": 100,
+      "img": "../public/images/attars/red-zx-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "romance",
+      "name": "Romance",
+      "price": 100,
+      "img": "../public/images/attars/romance-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "ruby-red",
+      "name": "Ruby Red",
+      "price": 199,
+      "img": "../public/images/attars/ruby-red.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "signature",
+      "name": "Signature",
+      "price": 100,
+      "img": "../public/images/attars/signature-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "silky-musk",
+      "name": "Silky Musk",
+      "price": 278,
+      "img": "../public/images/attars/Silky_musk.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "taif-rose",
+      "name": "Taif Rose",
+      "price": 299,
+      "img": "../public/images/attars/taif-rose.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "tomorrow",
+      "name": "Tomorrow",
+      "price": 199,
+      "img": "../public/images/attars/tomorow.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "topper",
+      "name": "Topper Nayaab",
+      "price": 460,
+      "img": "../public/images/attars/topper-20ml.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "white-london-attar",
+      "name": "White London",
+      "price": 100,
+      "img": "../public/images/attars/white-london-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "white-oudh",
+      "name": "White Oudh",
+      "price": 100,
+      "img": "../public/images/attars/white-oudh-almas-attar.jpg",
+      "tag": "new ",
+      "category": "attar"
+    },
+    {
+      "id": "zam-zam",
+      "name": "Zam Zam",
+      "price": 249,
+      "img": "../public/images/attars/zamzam.jpg",
+      "tag": "new ",
+      "category": "attar"
     }
   ],
 

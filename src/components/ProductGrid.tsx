@@ -65,7 +65,9 @@ export function ProductGrid({
               <p className="text-sm text-ivory/70 mt-1">{p.note}</p>
               <div className="flex justify-between items-center mt-4">
                 <p className="text-xl font-semibold text-gold">
-                  {p.price ? `₹${p.price.toLocaleString("en-IN")}` : "Price not available"}
+                  {p.price
+                    ? `₹${p.price.toLocaleString("en-IN")}`
+                    : "Price not available"}
                 </p>
                 <button
                   onClick={(e) => {
