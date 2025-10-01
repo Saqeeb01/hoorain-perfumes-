@@ -9,9 +9,9 @@ import { classNames } from "../utils";
 import { Button } from "./Button";
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1617125114978-891786726ea4?q=80&w=1920&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1620916566398-39f168376525?q=80&w=1920&auto=format&fit=crop",
-  "https://images.unsplash.com/photo-1594035918229-1191512a8a86?q=80&w=1920&auto=format&fit=crop",
+  "../../public/images/hero-image-1.png",
+  "../../public/images/hero-img-2.png",
+  "../../public/images/hero-img-3.png",
 ];
 
 export function Hero() {

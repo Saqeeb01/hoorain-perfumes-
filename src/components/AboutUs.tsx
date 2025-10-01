@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const aboutImage = "/images/perfumes/blackberry.jpg";
+const aboutImage = "../../public/images/perfume-frame.png";
 
 export function AboutUs() {
   return (
