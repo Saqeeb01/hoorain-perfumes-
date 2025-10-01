@@ -11,7 +11,7 @@ export function About() {
       >
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <img
-            src="https://images.unsplash.com/photo-1545776760-2e4f67fbd87d?q=80&w=1600&auto=format&fit=crop"
+            src="../../../public/images/cropped.png"
             alt="atelier"
             className="w-full h-72 object-cover rounded-2xl border border-white/10"
           />

@@ -96,7 +96,7 @@ export function Footer({ openPage }: { openPage: (p: Page) => void }) {
               Contact Us
             </h3>
             <ul className="mt-4 space-y-3 text-ivory/80">
-              <li>info@hoorainperfumes.com</li>
+              <li>hoorainperfumes@gmail</li>
               <li>+91 83100 60176</li>
               <li>Near Ambedkar Circle, Jamkhandi, Karnataka, India</li>
             </ul>

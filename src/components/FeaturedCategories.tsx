@@ -4,19 +4,17 @@ import { motion } from "framer-motion";
 const categories = [
   {
     name: "Attar",
-    image: "./pages/images/attar.jpg",
+    image: "../../public/images/attar-frame.png",
     description: "Concentrated perfume oils, rich and long-lasting.",
   },
   {
     name: "Perfumes",
-    image:
-      "https://images.unsplash.com/photo-1585218334450-afcf929da36e?fm=jpg&q=80&w=800&ixlib=rb-4.1.0",
+    image: "../../public/images/perfume-frame.png",
     description: "Elegant sprays for a modern, sophisticated aura.",
   },
   {
     name: "Agarbatti",
-    image:
-      "https://images.unsplash.com/photo-1585218334450-afcf929da36e?fm=jpg&q=80&w=800&ixlib=rb-4.1.0",
+    image: "../../public/images/agrabatti-frame.png",
     description: "Incense sticks to sanctify your space.",
   },
 ];

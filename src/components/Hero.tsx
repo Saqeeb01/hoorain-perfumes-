@@ -5,13 +5,16 @@ import { classNames } from "../utils";
 const heroImages = [
   "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=80&w=1920&ixlib=rb-4.1.0",
   "https://images.unsplash.com/photo-1523293182086-7651a899d37f?fm=jpg&q=80&w=1920&ixlib=rb-4.1.0",
-  "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1920&auto=format&fit=crop",
+  // "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1920&auto=format&fit=crop",
 ];
 
 export function Hero() {
   const [idx, setIdx] = useState(0);
   useEffect(() => {
-    const id = setInterval(() => setIdx((i) => (i + 1) % heroImages.length), 4500);
+    const id = setInterval(
+      () => setIdx((i) => (i + 1) % heroImages.length),
+      4500
+    );
     return () => clearInterval(id);
   }, []);
 

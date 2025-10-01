@@ -7,7 +7,8 @@
       "price": 599,
       "img": "/images/perfumes/P-bellavita-CEO-man.jpg",
       "tag": "Best Seller",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "bellavita-honey-oudh",
@@ -16,7 +17,8 @@
       "price": 599,
       "img": "/images/perfumes/bellavita-honey-oud.jpg",
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "bellavita-glam-women",
@@ -25,7 +27,8 @@
       "price": 599,
       "img": "../public/images/perfumes/P-bellavita-glam-women.jpg",
       "tag": "Limited",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
 
     {
@@ -34,7 +37,8 @@
       "note": "Lavender| Citrus, Floral",
       "img": "../public/images/perfumes/P-bellavita-fresh.jpg",
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "patel-neck-sukhad",
@@ -42,7 +46,8 @@
       "img": "../public/images/perfumes/patel-sukhad.jpg",
       "note": "Oud • Sandalwood ",
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "patel-classic-prince",
@@ -50,7 +55,8 @@
       "img": "../public/images/perfumes/P-patel-prince.jpg",
       "note": "orange",
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "30ml"
     },
     {
       "id": "patel-classic-premium",
@@ -58,7 +64,8 @@
       "img": "../public/images/perfumes/P-patel-cl-PREMIUM.jpg",
       "note": "sandlwood",
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "30ml"
     },
     {
       "id": "patel-holiday",
@@ -66,7 +73,8 @@
       "img": "../public/images/perfumes/P-patel-holiday.jpg",
       "note": "citrus",
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "30ml"
     },
     {
       "id": "patel-today",
@@ -75,7 +83,8 @@
       "img": "/images/perfumes/patel-today.jpg",
       "price": 239,
       "tag": "New",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "30ml"
     },
     {
       "id": "Ramsons Delano",
@@ -83,8 +92,9 @@
       "note": "citrus • Apple • Cinnamon",
       "price": 650,
       "img": "/images/perfumes/DELANO-ramsons.jpg",
-      "tag": "Best Seller",
-      "category": "perfumes"
+      "tag": "new",
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "ramsons-lucas",
@@ -93,7 +103,8 @@
       "price": 650,
       "img": "/images/perfumes/LUCAS-ramsons.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "ramsons-exotica",
@@ -102,7 +113,8 @@
       "price": 249,
       "img": "/images/perfumes/EXOTICA-ramsons.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "30ml"
     },
     {
       "id": "ramsons-red-zx",
@@ -111,7 +123,8 @@
       "price": 189,
       "img": "/images/perfumes/Ramsons-RED-zx.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "30ml"
     },
     {
       "id": "viwa-sandal",
@@ -120,7 +133,8 @@
       "price": 189,
       "img": "/images/perfumes/P-VIWA-sandal.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
     },
     {
       "id": "viwa-rose",
@@ -129,7 +143,8 @@
       "price": 189,
       "img": "/images/perfumes/P-VIWA-Rose.jpg.webp",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
     },
     {
       "id": "cr7",
@@ -138,7 +153,8 @@
       "price": 225,
       "img": "/images/perfumes/P-CR_7.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "hp-gold",
@@ -147,7 +163,8 @@
       "price": 265,
       "img": "/images/perfumes/P-hp-gold-100ml.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
     },
     {
       "id": "x-drax",
@@ -156,7 +173,8 @@
       "price": 271,
       "img": "/images/perfumes/P-drax-X.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
     },
     {
       "id": "blackberry",
@@ -165,7 +183,8 @@
       "price": 399,
       "img": "/images/perfumes/blackberry.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "whiteberry",
@@ -174,7 +193,8 @@
       "price": 280,
       "img": "/images/perfumes/P-whiteberry.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
     },
     {
       "id": "something-something",
@@ -183,7 +203,8 @@
       "price": 210,
       "img": "/images/perfumes/P-smthg-smthng.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
     },
     {
       "id": "vmj-las-vegas",
@@ -192,7 +213,8 @@
       "price": 585,
       "img": "/images/perfumes/P-VMJ.JPG",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "vmj-times",
@@ -201,7 +223,8 @@
       "price": 585,
       "img": "/images/perfumes/P-VMJ-TImes square brown.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "vmj-times-square",
@@ -210,7 +233,8 @@
       "price": 585,
       "img": "/images/perfumes/P-VMJ-Times-Square.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "ossa-magnet",
@@ -219,7 +243,8 @@
       "price": 340,
       "img": "/images/perfumes/P-ossa-MAGNET.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "aro-magnet",
@@ -228,7 +253,8 @@
       "price": 549,
       "img": "/images/perfumes/P-aro-Magnet.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "attar",
+      "quantity": "100ml"
     },
     {
       "id": "nuroma",
@@ -237,16 +263,18 @@
       "price": 549,
       "img": "/images/perfumes/P-nuroma.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "osr-girl",
       "name": "OSR Girl",
       "note": " musk • fresh ",
-      "price": 549,
+      "price": 263,
       "img": "/images/perfumes/Osr-girl.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "120ml"
     },
     {
       "id": "786-oudh",
@@ -255,7 +283,8 @@
       "price": 225,
       "img": "/images/perfumes/P-786-oudh.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "100ml"
     },
     {
       "id": "aco-shirli",
@@ -264,7 +293,18 @@
       "price": 225,
       "img": "/images/perfumes/P-ACO-shirlie.jpg",
       "tag": "new ",
-      "category": "perfumes"
+      "category": "perfumes",
+      "quantity": "60ml"
+    },
+
+    {
+      "id": "patel-neck",
+      "name": "Patel Neck ",
+      "img": "../public/images/perfumes/patel-neck.jpg",
+      "note": "Fresh • woody ",
+      "tag": "Best Seller",
+      "category": "perfumes",
+      "quantity": "100ml"
     },
 
     {
@@ -273,7 +313,8 @@
       "price": 149,
       "img": "../public/images/attars/pate-neck.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "musk-ajmeri",
@@ -281,15 +322,17 @@
       "price": 248,
       "img": "../public/images/attars/musk ajmeri.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "tohfa",
       "name": "Tohfa",
       "price": 259,
       "img": "../public/images/attars/tohfa-attar.jpg",
-      "tag": "Best Seller",
-      "category": "attar"
+      "tag": "new",
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "friday",
@@ -297,7 +340,8 @@
       "price": 249,
       "img": "../public/images/attars/friday-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "urban-shade",
@@ -305,7 +349,8 @@
       "price": 249,
       "img": "../public/images/attars/urban-shade.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "musk-sapphire",
@@ -313,7 +358,8 @@
       "price": 199,
       "img": "../public/images/attars/musk-saphhire.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "mountain-water",
@@ -321,15 +367,17 @@
       "price": 199,
       "img": "../public/images/attars/mountain-water.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "white-oudh-alburooj",
       "name": "White Oudh",
       "price": 199,
       "img": "../public/images/attars/white-oudh.jpg",
-      "tag": "new ",
-      "category": "attar"
+      "tag": "Best Seller",
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "samawi",
@@ -337,7 +385,8 @@
       "price": 199,
       "img": "../public/images/attars/samawi.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "srf-attarful",
@@ -345,7 +394,8 @@
       "price": 99,
       "img": "../public/images/attars/ahsan-attarful.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "black-touch",
@@ -353,7 +403,8 @@
       "price": 129,
       "img": "../public/images/attars/BlackTouch6mlL.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "rhymes",
@@ -361,7 +412,8 @@
       "price": 129,
       "img": "../public/images/attars/rhymes.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "555",
@@ -369,7 +421,8 @@
       "price": 100,
       "img": "../public/images/attars/555-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "24-caret",
@@ -377,7 +430,8 @@
       "price": 100,
       "img": "../public/images/attars/24_Caret_6ml.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "aayat",
@@ -385,7 +439,8 @@
       "price": 219,
       "img": "../public/images/attars/aayat.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "10ml"
     },
     {
       "id": "aaisha",
@@ -393,7 +448,8 @@
       "price": 280,
       "img": "../public/images/attars/AIASHA-20ml.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "20ml"
     },
     {
       "id": "aro-magnet",
@@ -401,7 +457,8 @@
       "price": 100,
       "img": "../public/images/attars/aro-magnet.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "best",
@@ -409,7 +466,8 @@
       "price": 100,
       "img": "../public/images/attars/best-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "black-musk-almas",
@@ -417,7 +475,8 @@
       "price": 100,
       "img": "../public/images/attars/black-musk-almas.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "deeds",
@@ -425,7 +484,8 @@
       "price": 100,
       "img": "../public/images/attars/deeds.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "krs-nayaab",
@@ -433,7 +493,8 @@
       "price": 120,
       "img": "../public/images/attars/krs-nayab.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "aayat",
@@ -441,7 +502,8 @@
       "price": 219,
       "img": "../public/images/attars/aayat.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "9.9ml"
     },
     {
       "id": "laila",
@@ -449,7 +511,8 @@
       "price": 140,
       "img": "../public/images/attars/laila-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "blac-musk",
@@ -457,7 +520,8 @@
       "price": 100,
       "img": "../public/images/attars/black-musk-alnuaim.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "black-orchid",
@@ -465,7 +529,8 @@
       "price": 199,
       "img": "../public/images/attars/black-orchid.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "9.9ml"
     },
     {
       "id": "chandan",
@@ -473,7 +538,8 @@
       "price": 425,
       "img": "../public/images/attars/chandan-balaji-8ml.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "8ml"
     },
     {
       "id": "choclate",
@@ -481,7 +547,8 @@
       "price": 100,
       "img": "../public/images/attars/choclate-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "cobra",
@@ -489,7 +556,8 @@
       "price": 100,
       "img": "../public/images/attars/cobra-al-nuaim.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "deeds-black",
@@ -497,7 +565,8 @@
       "price": 100,
       "img": "../public/images/attars/deeds-black.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "gilaf",
@@ -505,7 +574,8 @@
       "price": 280,
       "img": "../public/images/attars/gilaf.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "20ml"
     },
     {
       "id": "green-ajmeri",
@@ -513,7 +583,8 @@
       "price": 199,
       "img": "../public/images/attars/green-ajmeri.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "10ml"
     },
     {
       "id": "ice-berg",
@@ -521,7 +592,8 @@
       "price": 100,
       "img": "../public/images/attars/iceberg-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "musk-rizali",
@@ -529,7 +601,8 @@
       "price": 100,
       "img": "../public/images/attars/MuskRizali6mlL.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "pro-cigar",
@@ -537,7 +610,8 @@
       "price": 100,
       "img": "../public/images/attars/pro-cigar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "raees",
@@ -545,7 +619,8 @@
       "price": 280,
       "img": "../public/images/attars/raees.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "20ml"
     },
     {
       "id": "red-zx",
@@ -553,7 +628,8 @@
       "price": 100,
       "img": "../public/images/attars/red-zx-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "romance",
@@ -561,7 +637,8 @@
       "price": 100,
       "img": "../public/images/attars/romance-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "ruby-red",
@@ -569,7 +646,8 @@
       "price": 199,
       "img": "../public/images/attars/ruby-red.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "9.9ml"
     },
     {
       "id": "signature",
@@ -577,7 +655,8 @@
       "price": 100,
       "img": "../public/images/attars/signature-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "silky-musk",
@@ -585,7 +664,8 @@
       "price": 278,
       "img": "../public/images/attars/Silky_musk.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "10ml"
     },
     {
       "id": "taif-rose",
@@ -593,7 +673,8 @@
       "price": 299,
       "img": "../public/images/attars/taif-rose.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "20ml"
     },
     {
       "id": "tomorrow",
@@ -601,7 +682,8 @@
       "price": 199,
       "img": "../public/images/attars/tomorow.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "10ml"
     },
     {
       "id": "topper",
@@ -609,7 +691,8 @@
       "price": 460,
       "img": "../public/images/attars/topper-20ml.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "20ml"
     },
     {
       "id": "white-london-attar",
@@ -617,7 +700,8 @@
       "price": 100,
       "img": "../public/images/attars/white-london-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "white-oudh",
@@ -625,7 +709,8 @@
       "price": 100,
       "img": "../public/images/attars/white-oudh-almas-attar.jpg",
       "tag": "new ",
-      "category": "attar"
+      "category": "attar",
+      "quantity": "6ml"
     },
     {
       "id": "zam-zam",
@@ -634,7 +719,98 @@
       "img": "../public/images/attars/zamzam.jpg",
       "tag": "new ",
       "category": "attar",
-      "quantity": "6ml"
+      "quantity": "20ml"
+    },
+
+    {
+      "id": "holiday",
+      "name": "Holiday",
+      "price": 59,
+      "img": "../public/images/agarbattis/Holiday_360x.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "bindi",
+      "name": "Bindu",
+      "price": 59,
+      "img": "../public/images/agarbattis/Bindu_360x.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "black-forest",
+      "name": "Black Forest",
+      "price": 59,
+      "img": "../public/images/agarbattis/Black-Forest.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "blue-musk",
+      "name": "Blue Musk",
+      "price": 59,
+      "img": "../public/images/agarbattis/blue-musk-zipper.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "favorite",
+      "name": "Favorite",
+      "price": 59,
+      "img": "../public/images/agarbattis/Favorite_360x.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "gold-musk",
+      "name": "Gold Musk",
+      "price": 59,
+      "img": "../public/images/agarbattis/gold-musk-zipper.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "kewda",
+      "name": "Kewda Dhoop Sticks",
+      "price": 79,
+      "img": "../public/images/agarbattis/kewda-80rs.jpg",
+      "tag": "Best Seller",
+      "category": "agarbatti",
+      "quantity": "100gm"
+    },
+    {
+      "id": "loban",
+      "name": "Loban",
+      "price": 59,
+      "img": "../public/images/agarbattis/Loban_360x.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "packofsix",
+      "name": "Forest Fragnance",
+      "price": 399,
+      "img": "../public/images/agarbattis/Holiday_360x.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
+    },
+    {
+      "id": "white-forest",
+      "name": "White Forest",
+      "price": 59,
+      "img": "../public/images/agarbattis/white forest.jpg",
+      "tag": "new ",
+      "category": "agarbatti",
+      "quantity": "115gm"
     }
   ],
 
