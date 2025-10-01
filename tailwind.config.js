@@ -7,11 +7,12 @@ export default {
       colors: {
         black: "#0b0b0d",
         gold: {
-          light: "#d4af37",
-          DEFAULT: "#c4a035",
-          dark: "#b39031",
+          light: "#F1E5AC",
+          DEFAULT: "#D4AF37",
+          dark: "#B8860B",
         },
-        ivory: "#fffff0",
+        beige: "#F5F5DC",
+        white: "#FFFFFF",
       },
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],

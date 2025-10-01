@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Page, Category, categories } from "../types";
 import { classNames } from "../utils";
 import { ShoppingCart, User, Search } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function NavBar({
   page,
@@ -35,7 +36,7 @@ export function NavBar({
               <span className="font-serif text-3xl font-bold text-gold">
                 Hoorain
               </span>
-              <span className="text-sm text-ivory/70 tracking-widest">
+              <span className="text-sm text-beige/70 tracking-widest">
                 PERFUMES
               </span>
             </a>
@@ -52,38 +53,54 @@ export function NavBar({
                   <button
                     onClick={() => openPage(l.key)}
                     className={classNames(
-                      "relative text-lg font-medium transition-colors duration-300",
+                      "relative group text-lg font-medium transition-colors duration-300",
                       page === l.key
                         ? "text-gold"
-                        : "text-ivory hover:text-gold"
+                        : "text-beige hover:text-gold"
                     )}
                   >
                     {l.label}
+                    <span
+                      className={classNames(
+                        "absolute left-0 -bottom-1 h-0.5 bg-gold transition-all duration-300",
+                        page === l.key ? "w-full" : "w-0 group-hover:w-full"
+                      )}
+                    />
                   </button>
-                  {showCollections && (
-                    <div className="absolute top-full left-0 mt-2 w-48 bg-black/80 backdrop-blur-lg rounded-md shadow-lg">
-                      {categories.map((c) => (
-                        <a
-                          key={c}
-                          href={`#collections/${c}`}
-                          onClick={() => openPage("collections", c)}
-                          className="block px-4 py-2 text-sm text-ivory hover:bg-gold hover:text-black capitalize"
-                        >
-                          {c}
-                        </a>
-                      ))}
-                    </div>
-                  )}
+                  <AnimatePresence>
+                    {showCollections && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -10 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute top-full -left-1/2 mt-4 w-64 transform translate-x-1/4 bg-black/70 backdrop-blur-xl rounded-lg shadow-2xl ring-1 ring-white/10"
+                      >
+                        <div className="p-4">
+                          {categories.map((c) => (
+                            <a
+                              key={c}
+                              href={`#collections/${c}`}
+                              onClick={() => openPage("collections", c)}
+                              className="block px-4 py-3 text-md text-beige rounded-md hover:bg-gold/10 hover:text-gold transition-all duration-200 capitalize"
+                            >
+                              {c}
+                            </a>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </div>
               ) : (
                 <button
                   key={l.key}
                   onClick={() => openPage(l.key)}
                   className={classNames(
-                    "relative text-lg font-medium transition-colors duration-300",
+                    "relative group text-lg font-medium transition-colors duration-300",
                     page === l.key
                       ? "text-gold"
-                      : "text-ivory hover:text-gold"
+                      : "text-beige hover:text-gold"
                   )}
                 >
                   {l.label}
@@ -98,23 +115,41 @@ export function NavBar({
             )}
           </nav>
           <div className="flex items-center gap-6">
-            <button className="text-ivory hover:text-gold transition-colors">
+            <motion.button
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-beige hover:text-gold transition-colors"
+            >
               <Search size={22} />
-            </button>
-            <button className="text-ivory hover:text-gold transition-colors">
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-beige hover:text-gold transition-colors"
+            >
               <User size={22} />
-            </button>
-            <button
+            </motion.button>
+            <motion.button
               onClick={onCart}
-              className="relative text-ivory hover:text-gold transition-colors"
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.95 }}
+              className="relative text-beige hover:text-gold transition-colors"
             >
               <ShoppingCart size={22} />
-              {cartCount > 0 && (
-                <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-gold text-xs font-bold text-black">
-                  {cartCount}
-                </span>
-              )}
-            </button>
+              <AnimatePresence>
+                {cartCount > 0 && (
+                  <motion.span
+                    initial={{ scale: 0, opacity: 0, y: -10 }}
+                    animate={{ scale: 1, opacity: 1, y: 0 }}
+                    exit={{ scale: 0, opacity: 0 }}
+                    transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                    className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-gold text-xs font-bold text-black"
+                  >
+                    {cartCount}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.button>
           </div>
         </div>
       </div>
