@@ -1,11 +1,17 @@
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, useRef } from "react";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import { classNames } from "../utils";
+import { Button } from "./Button";
 
 const heroImages = [
-  "https://images.unsplash.com/photo-1541643600914-78b084683601?fm=jpg&q=80&w=1920&ixlib=rb-4.1.0",
-  "https://images.unsplash.com/photo-1523293182086-7651a899d37f?fm=jpg&q=80&w=1920&ixlib=rb-4.1.0",
-  // "https://images.unsplash.com/photo-1622162227449-6551637402a7?q=80&w=1920&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1617125114978-891786726ea4?q=80&w=1920&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1620916566398-39f168376525?q=80&w=1920&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1594035918229-1191512a8a86?q=80&w=1920&auto=format&fit=crop",
 ];
 
 export function Hero() {
@@ -13,53 +19,68 @@ export function Hero() {
   useEffect(() => {
     const id = setInterval(
       () => setIdx((i) => (i + 1) % heroImages.length),
-      4500
+      5000
     );
     return () => clearInterval(id);
   }, []);
 
+  const heroRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+
+  const yBg = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const yText = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const opacityText = useTransform(scrollYProgress, [0, 0.7, 1], [1, 1, 0]);
+
   return (
-    <div className="relative h-[80vh] w-full overflow-hidden">
+    <div ref={heroRef} className="relative h-[90vh] w-full overflow-hidden">
       <AnimatePresence>
         <motion.img
           key={idx}
           src={heroImages[idx]}
-          alt="Hoorain hero"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          alt="Luxurious perfume bottles and fragrance elements"
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 1.5 }}
+          transition={{ duration: 2, ease: "easeInOut" }}
           className="absolute inset-0 w-full h-full object-cover"
+          style={{ y: yBg }}
         />
       </AnimatePresence>
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
+      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent" />
+      <motion.div
+        className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white p-4"
+        style={{ y: yText, opacity: opacityText }}
+      >
         <motion.h1
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-serif text-5xl md:text-7xl text-ivory"
+          transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
+          className="font-serif text-5xl md:text-7xl lg:text-8xl text-beige leading-tight"
         >
-          Hoorain Perfumes
+          Experience the Essence of Luxury
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="mt-4 text-lg md:text-xl text-ivory/80"
+          transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          className="mt-4 text-lg md:text-xl text-beige/80 max-w-2xl"
         >
-          Where Fragrance Meets Elegance
+          Hoorain Perfumes
         </motion.p>
-        <motion.a
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          href="#collections"
-          className="mt-8 px-8 py-3 font-semibold text-black bg-gold rounded-full transition-all duration-300 hover:bg-gold-light hover:shadow-lg hover:shadow-gold/30"
+          transition={{ duration: 0.7, delay: 0.9, ease: "easeOut" }}
+          className="mt-10"
         >
-          Shop Now
-        </motion.a>
-      </div>
+          <Button href="#collections" size="lg">
+            Discover Our Collections
+          </Button>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
