@@ -4,16 +4,16 @@ import { Button } from "./Button";
 
 const categories = [
   {
-    name: "Attar",
-    image: "/images/attar-frame.png",
-    description: "Concentrated perfume oils, rich and long-lasting.",
-    href: "#collections/attar",
-  },
-  {
     name: "Perfumes",
     image: "/images/perfume-frame.png",
     description: "Elegant sprays for a modern, sophisticated aura.",
     href: "#collections/perfume",
+  },
+  {
+    name: "Attar",
+    image: "/images/attar-frame.png",
+    description: "Concentrated perfume oils, rich and long-lasting.",
+    href: "#collections/attar",
   },
   {
     name: "Agarbatti",
