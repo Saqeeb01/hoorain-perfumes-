@@ -28,6 +28,15 @@ export default function HoorainPerfumes() {
   const [products, setProducts] = useState<Product[]>(
     [...productData.products].reverse()
   );
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query) {
+      location.hash = "#collections";
+    }
+  };
 
   useEffect(() => {
     const applyFromHash = () => {
@@ -36,11 +45,16 @@ export default function HoorainPerfumes() {
       if (page === "product" && param) {
         setPage("product");
         setSelectedProductId(param);
+        setSearchQuery(""); // Clear search when viewing a product
       } else {
         setPage(pages.includes(page as Page) ? (page as Page) : "home");
         setCategory(
           categories.includes(param as Category) ? (param as Category) : "all"
         );
+        // If navigating to a category, clear the search
+        if (param && categories.includes(param as Category)) {
+          setSearchQuery("");
+        }
       }
     };
     applyFromHash();
@@ -59,6 +73,20 @@ export default function HoorainPerfumes() {
       return sum + (item ? item.price * line.qty : 0);
     }, 0);
   }, [cart, products]);
+
+  const filteredProducts = useMemo(() => {
+    if (!searchQuery) {
+      return products;
+    }
+    const lowerCaseQuery = searchQuery.toLowerCase();
+    return products.filter((p) => {
+      const nameMatch = p.name && p.name.toLowerCase().includes(lowerCaseQuery);
+      const noteMatch = p.note && p.note.toLowerCase().includes(lowerCaseQuery);
+      const categoryMatch =
+        p.category && p.category.toLowerCase().includes(lowerCaseQuery);
+      return nameMatch || noteMatch || categoryMatch;
+    });
+  }, [searchQuery, products]);
 
   const addToCart = (id: string, qty = 1) => {
     setCart((prev) => {
@@ -88,6 +116,10 @@ export default function HoorainPerfumes() {
         openPage={openPage}
         cartCount={cartCount}
         onCart={() => setCartOpen(true)}
+        searchOpen={searchOpen}
+        setSearchOpen={setSearchOpen}
+        searchQuery={searchQuery}
+        setSearchQuery={handleSearch}
       />
       <main className="relative z-10">
         <AnimatePresence mode="wait">
@@ -109,9 +141,10 @@ export default function HoorainPerfumes() {
             <PageShell key="collections">
               <Collections
                 addToCart={addToCart}
-                products={products}
+                products={filteredProducts}
                 category={category}
                 openPage={openPage}
+                searchQuery={searchQuery}
               />
             </PageShell>
           )}
