@@ -75,18 +75,29 @@ export default function HoorainPerfumes() {
   }, [cart, products]);
 
   const filteredProducts = useMemo(() => {
-    if (!searchQuery) {
-      return products;
+    let filtered = products;
+
+    // Filter by category if not 'all'
+    if (category !== "all") {
+      filtered = filtered.filter((p) => p.category === category);
     }
-    const lowerCaseQuery = searchQuery.toLowerCase();
-    return products.filter((p) => {
-      const nameMatch = p.name && p.name.toLowerCase().includes(lowerCaseQuery);
-      const noteMatch = p.note && p.note.toLowerCase().includes(lowerCaseQuery);
-      const categoryMatch =
-        p.category && p.category.toLowerCase().includes(lowerCaseQuery);
-      return nameMatch || noteMatch || categoryMatch;
-    });
-  }, [searchQuery, products]);
+
+    // Then filter by search query
+    if (searchQuery) {
+      const lowerCaseQuery = searchQuery.toLowerCase();
+      filtered = filtered.filter((p) => {
+        const nameMatch =
+          p.name && p.name.toLowerCase().includes(lowerCaseQuery);
+        const noteMatch =
+          p.note && p.note.toLowerCase().includes(lowerCaseQuery);
+        const categoryMatch =
+          p.category && p.category.toLowerCase().includes(lowerCaseQuery);
+        return nameMatch || noteMatch || categoryMatch;
+      });
+    }
+
+    return filtered;
+  }, [products, category, searchQuery]);
 
   const addToCart = (id: string, qty = 1) => {
     setCart((prev) => {
