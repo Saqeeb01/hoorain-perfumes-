@@ -1,6 +1,6 @@
 import React from "react";
 import { Section } from "../Section";
-import { Product } from "../ProductGrid";
+import { Product, ProductGrid } from "../ProductGrid";
 import { Category, Page } from "../../types";
 
 export function Collections({
@@ -24,12 +24,20 @@ export function Collections({
   return (
     <div>
       <Section title={title} subtitle={subtitle}>
-        <div className="text-center text-beige/70 py-12">
-          <p className="text-2xl">Debugging Mode</p>
-          <p className="mt-2 text-lg">
-            Number of products received: {products.length}
-          </p>
-        </div>
+        {products.length > 0 ? (
+          <ProductGrid
+            products={products}
+            addToCart={addToCart}
+            openPage={openPage}
+          />
+        ) : (
+          <div className="text-center text-beige/70 py-12">
+            <p className="text-2xl">No products found</p>
+            <p className="mt-2 text-lg">
+              Please try a different search term or browse our categories.
+            </p>
+          </div>
+        )}
       </Section>
     </div>
   );
