@@ -165,7 +165,7 @@ export default function HoorainPerfumes() {
           )}
           {page === "collections" && (
             <PageShell
-              key="collections"
+              key={`collections-${category}`}
               onAnimationComplete={handleAnimationComplete}
             >
               <Collections
