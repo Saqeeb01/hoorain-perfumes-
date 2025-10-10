@@ -10,7 +10,7 @@ import { Button } from "./Button";
 
 const heroImages = [
   "../../public/images/hero-image-1.png",
-  "../../public/images/hero-img-2.png",
+  "../../public/images/hero-img-2.png", 
   "../../public/images/hero-img-3.png",
 ];
 
