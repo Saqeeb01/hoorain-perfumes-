@@ -5,19 +5,19 @@ import { Button } from "./Button";
 const categories = [
   {
     name: "Perfumes",
-    image: "/images/perfume-frame.png",
+    image: "../../public/images/proimages/perfume-frame.png",
     description: "Elegant sprays for a modern, sophisticated aura.",
     href: "#collections/perfume",
   },
   {
     name: "Attar",
-    image: "/images/attar-frame.png",
+    image: "../../public/images/proimages/attar-frame.png",
     description: "Concentrated perfume oils, rich and long-lasting.",
     href: "#collections/attar",
   },
   {
     name: "Agarbatti",
-    image: "/images/agrabatti-frame.png",
+    image: "../../public/images/proimages/agrabatti-frame.png",
     description: "Incense sticks to sanctify your space.",
     href: "#collections/agarbatti",
   },
@@ -56,7 +56,9 @@ export function FeaturedCategories() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg text-beige/80 text-center max-w-3xl mx-auto mb-16"
         >
-          From the deep, resonant notes of traditional Attars to the bright, airy essences of our modern Perfumes, discover a scent that tells your story.
+          From the deep, resonant notes of traditional Attars to the bright,
+          airy essences of our modern Perfumes, discover a scent that tells your
+          story.
         </motion.p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
           {categories.map((category, i) => (
@@ -88,7 +90,7 @@ export function FeaturedCategories() {
                   whileInView="visible"
                   className="transition-all duration-300 group-hover:opacity-100"
                 >
-                   <Button href={category.href} size="md">
+                  <Button href={category.href} size="md">
                     Shop {category.name}
                   </Button>
                 </motion.div>
