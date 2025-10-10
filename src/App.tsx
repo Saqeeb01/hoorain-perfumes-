@@ -15,6 +15,8 @@ import { SingleProduct } from "./components/pages/SingleProduct";
 import { CartDrawer } from "./components/CartDrawer";
 import { StickyCTA } from "./components/StickyCTA";
 import { Product } from "./components/ProductGrid";
+import { LoadingIndicator } from "./components/LoadingIndicator";
+import { ScrollToTopButton } from "./components/ScrollToTopButton";
 import productData from "./data.json";
 
 export default function HoorainPerfumes() {
@@ -25,11 +27,18 @@ export default function HoorainPerfumes() {
   );
   const [cart, setCart] = useState<{ id: string; qty: number }[]>([]);
   const [cartOpen, setCartOpen] = useState(false);
-  const [products, setProducts] = useState<Product[]>(
-    [...productData.products].reverse()
-  );
+  const [products, setProducts] = useState<Product[]>([]);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading data
+    setTimeout(() => {
+      setProducts([...productData.products].reverse());
+      setIsLoading(false);
+    }, 500);
+  }, []);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -40,18 +49,18 @@ export default function HoorainPerfumes() {
 
   useEffect(() => {
     const applyFromHash = () => {
+      setIsLoading(true);
       const hash = location.hash.replace("#", "") || "home";
       const [page, param] = hash.split("/");
       if (page === "product" && param) {
         setPage("product");
         setSelectedProductId(param);
-        setSearchQuery(""); // Clear search when viewing a product
+        setSearchQuery("");
       } else {
         setPage(pages.includes(page as Page) ? (page as Page) : "home");
         setCategory(
           categories.includes(param as Category) ? (param as Category) : "all"
         );
-        // If navigating to a category, clear the search
         if (param && categories.includes(param as Category)) {
           setSearchQuery("");
         }
@@ -118,8 +127,14 @@ export default function HoorainPerfumes() {
   const removeLine = (id: string) =>
     setCart((prev) => prev.filter((l) => l.id !== id));
 
+  const handleAnimationComplete = () => {
+    // Add a small delay to prevent flickering
+    setTimeout(() => setIsLoading(false), 150);
+  };
+
   return (
     <div className="min-h-screen text-white bg-[#0b0b0d] selection:bg-yellow-300/30 selection:text-yellow-50">
+      <LoadingIndicator loading={isLoading} />
       <SiteBackdrop />
       <TopBar />
       <NavBar
@@ -135,7 +150,7 @@ export default function HoorainPerfumes() {
       <main className="relative z-10">
         <AnimatePresence mode="wait">
           {page === "home" && (
-            <PageShell key="home">
+            <PageShell key="home" onAnimationComplete={handleAnimationComplete}>
               <Home
                 addToCart={addToCart}
                 products={products}
@@ -144,12 +159,15 @@ export default function HoorainPerfumes() {
             </PageShell>
           )}
           {page === "about" && (
-            <PageShell key="about">
+            <PageShell key="about" onAnimationComplete={handleAnimationComplete}>
               <About />
             </PageShell>
           )}
           {page === "collections" && (
-            <PageShell key="collections">
+            <PageShell
+              key="collections"
+              onAnimationComplete={handleAnimationComplete}
+            >
               <Collections
                 addToCart={addToCart}
                 products={filteredProducts}
@@ -160,20 +178,26 @@ export default function HoorainPerfumes() {
             </PageShell>
           )}
           {page === "contact" && (
-            <PageShell key="contact">
+            <PageShell
+              key="contact"
+              onAnimationComplete={handleAnimationComplete}
+            >
               <Contact />
             </PageShell>
           )}
           {page === "admin" && (
-            <PageShell key="admin">
+            <PageShell key="admin" onAnimationComplete={handleAnimationComplete}>
               <Admin />
             </PageShell>
           )}
           {page === "product" && selectedProductId && (
-            <PageShell key="product">
+            <PageShell
+              key="product"
+              onAnimationComplete={handleAnimationComplete}
+            >
               <SingleProduct
                 addToCart={addToCart}
-                product={products.find((p) => p.id === selectedProductId)!}
+                product={products.find((p) => p.id === selectedProductId)}
               />
             </PageShell>
           )}
@@ -190,6 +214,7 @@ export default function HoorainPerfumes() {
         products={products}
       />
       <StickyCTA />
+      <ScrollToTopButton />
     </div>
   );
 }

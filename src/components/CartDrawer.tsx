@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Trash2 } from "lucide-react";
 import { classNames, glass, goldBorder, goldText } from "../utils";
 import { Product } from "./ProductGrid";
 
@@ -91,31 +92,29 @@ export function CartDrawer({
                           {" "}
                           ₹{p.price.toLocaleString("en-IN")}{" "}
                         </div>
-                        <div className="mt-2 flex items-center gap-2">
-                          <button
-                            onClick={() => setQty(line.id, line.qty - 1)}
-                            className="px-2 rounded-lg border border-white/15"
-                          >
-                            {" "}
-                            -{" "}
-                          </button>
-                          <span className="min-w-[2ch] text-center">
-                            {" "}
-                            {line.qty}{" "}
-                          </span>
-                          <button
-                            onClick={() => setQty(line.id, line.qty + 1)}
-                            className="px-2 rounded-lg border border-white/15"
-                          >
-                            {" "}
-                            +{" "}
-                          </button>
+                        <div className="mt-2 flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <button
+                              onClick={() => setQty(line.id, line.qty - 1)}
+                              className="w-8 h-8 flex items-center justify-center rounded-full border border-white/15 hover:bg-white/10 transition-colors"
+                            >
+                              -
+                            </button>
+                            <span className="min-w-[2ch] text-center font-semibold">
+                              {line.qty}
+                            </span>
+                            <button
+                              onClick={() => setQty(line.id, line.qty + 1)}
+                              className="w-8 h-8 flex items-center justify-center rounded-full border border-white/15 hover:bg-white/10 transition-colors"
+                            >
+                              +
+                            </button>
+                          </div>
                           <button
                             onClick={() => removeLine(line.id)}
-                            className="ml-3 text-xs text-red-300/90 hover:underline"
+                            className="text-red-300/70 hover:text-red-300 transition-colors"
                           >
-                            {" "}
-                            Remove{" "}
+                            <Trash2 size={18} />
                           </button>
                         </div>
                       </div>
