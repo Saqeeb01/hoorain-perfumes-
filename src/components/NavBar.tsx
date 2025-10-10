@@ -24,6 +24,7 @@ export function NavBar({
   setSearchQuery: (query: string) => void;
 }) {
   const [showCollections, setShowCollections] = useState(false);
+  const [showUserMenu, setShowUserMenu] = useState(false);
   const links: { key: Page; label: string }[] = [
     { key: "home", label: "Home" },
     { key: "collections", label: "Collections" },
@@ -31,12 +32,35 @@ export function NavBar({
     { key: "contact", label: "Contact" },
   ];
   const searchInputRef = useRef<HTMLInputElement>(null);
+  const collectionsRef = useRef<HTMLDivElement>(null);
+  const userMenuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (searchOpen) {
       searchInputRef.current?.focus();
     }
   }, [searchOpen]);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        collectionsRef.current &&
+        !collectionsRef.current.contains(event.target as Node)
+      ) {
+        setShowCollections(false);
+      }
+      if (
+        userMenuRef.current &&
+        !userMenuRef.current.contains(event.target as Node)
+      ) {
+        setShowUserMenu(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-black/80 backdrop-blur-lg">
@@ -96,17 +120,14 @@ export function NavBar({
                 >
                   {links.map((l) =>
                     l.key === "collections" ? (
-                      <div
-                        key={l.key}
-                        className="relative"
-                        onMouseEnter={() => setShowCollections(true)}
-                        onMouseLeave={() => setShowCollections(false)}
-                      >
+                      <div key={l.key} className="relative" ref={collectionsRef}>
                         <button
-                          onClick={() => openPage(l.key)}
+                          onClick={() => {
+                            setShowCollections((prev) => !prev);
+                          }}
                           className={classNames(
                             "relative group text-lg font-medium transition-colors duration-300",
-                            page === l.key
+                            page === l.key || showCollections
                               ? "text-gold"
                               : "text-beige hover:text-gold"
                           )}
@@ -131,16 +152,31 @@ export function NavBar({
                               className="absolute top-full -left-1/2 mt-4 w-64 transform translate-x-1/4 bg-black/70 backdrop-blur-xl rounded-lg shadow-2xl ring-1 ring-white/10"
                             >
                               <div className="p-4">
-                                {categories.map((c) => (
-                                  <a
-                                    key={c}
-                                    href={`#collections/${c}`}
-                                    onClick={() => openPage("collections", c)}
-                                    className="block px-4 py-3 text-md text-beige rounded-md hover:bg-gold/10 hover:text-gold transition-all duration-200 capitalize"
-                                  >
-                                    {c}
-                                  </a>
-                                ))}
+                                <a
+                                  href="#collections/all"
+                                  onClick={() => {
+                                    openPage("collections", "all");
+                                    setShowCollections(false);
+                                  }}
+                                  className="block px-4 py-3 text-md text-beige rounded-md hover:bg-gold/10 hover:text-gold transition-all duration-200 capitalize"
+                                >
+                                  All Collections
+                                </a>
+                                {categories
+                                  .filter((c) => c !== "all")
+                                  .map((c) => (
+                                    <a
+                                      key={c}
+                                      href={`#collections/${c}`}
+                                      onClick={() => {
+                                        openPage("collections", c);
+                                        setShowCollections(false);
+                                      }}
+                                      className="block px-4 py-3 text-md text-beige rounded-md hover:bg-gold/10 hover:text-gold transition-all duration-200 capitalize"
+                                    >
+                                      {c}
+                                    </a>
+                                  ))}
                               </div>
                             </motion.div>
                           )}
@@ -193,15 +229,43 @@ export function NavBar({
                 </motion.div>
               </AnimatePresence>
             </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.15 }}
-              whileTap={{ scale: 0.95 }}
-              className="text-beige hover:text-gold transition-colors"
-            >
-              <User size={22} />
-            </motion.button>
+            <div className="relative" ref={userMenuRef}>
+              <motion.button
+                onClick={() => setShowUserMenu((prev) => !prev)}
+                whileHover={{ scale: 1.15 }}
+                whileTap={{ scale: 0.95 }}
+                className="text-beige hover:text-gold transition-colors"
+              >
+                <User size={22} />
+              </motion.button>
+              <AnimatePresence>
+                {showUserMenu && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-full right-0 mt-4 w-48 bg-black/70 backdrop-blur-xl rounded-lg shadow-2xl ring-1 ring-white/10"
+                  >
+                    <div className="p-2">
+                      <a
+                        href="#admin"
+                        onClick={() => {
+                          openPage("admin");
+                          setShowUserMenu(false);
+                        }}
+                        className="block px-4 py-3 text-md text-beige rounded-md hover:bg-gold/10 hover:text-gold transition-all duration-200"
+                      >
+                        Admin Panel
+                      </a>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <motion.button
               onClick={onCart}
+              aria-label="Open cart"
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.95 }}
               className="relative text-beige hover:text-gold transition-colors"

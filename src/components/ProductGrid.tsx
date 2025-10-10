@@ -63,6 +63,7 @@ export function ProductGrid({
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.1 }}
                 transition={{ duration: 0.4, ease: "easeInOut" }}
+                loading="lazy"
               />
             </div>
             <div className="p-5 text-center">
@@ -70,7 +71,9 @@ export function ProductGrid({
               {p.quantity && (
                 <p className="text-sm text-beige/70">{p.quantity}</p>
               )}
-              <p className="text-sm text-beige/60 mt-1 h-10">{p.note}</p>
+              <p className="text-sm text-beige/60 mt-1 h-10 line-clamp-2">
+                {p.note}
+              </p>
               <div className="flex justify-between items-center mt-4">
                 <p className="text-2xl font-semibold text-gold">
                   {p.price
@@ -82,8 +85,9 @@ export function ProductGrid({
                     e.stopPropagation();
                     addToCart(p.id, 1);
                   }}
+                  aria-label={`Add ${p.name} to cart`}
                   className="w-11 h-11 flex items-center justify-center bg-gold text-black rounded-full"
-                  whileHover={{ scale: 1.1, rotate: 90 }}
+                  whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                   transition={{ duration: 0.2 }}
                 >
