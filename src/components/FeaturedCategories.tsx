@@ -5,19 +5,19 @@ import { Button } from "./Button";
 const categories = [
   {
     name: "Perfumes",
-    image: "../../public/images/proimages/perfume-frame.png",
+    image: "/images/proimages/perfume-frame.png",
     description: "Elegant sprays for a modern, sophisticated aura.",
     href: "#collections/perfume",
   },
   {
     name: "Attar",
-    image: "../../public/images/proimages/attar-frame.png",
+    image: "/images/proimages/attar-frame.png",
     description: "Concentrated perfume oils, rich and long-lasting.",
     href: "#collections/attar",
   },
   {
     name: "Agarbatti",
-    image: "../../public/images/proimages/agrabatti-frame.png",
+    image: "/images/proimages/agrabatti-frame.png",
     description: "Incense sticks to sanctify your space.",
     href: "#collections/agarbatti",
   },
